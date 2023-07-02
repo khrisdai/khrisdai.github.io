@@ -139,8 +139,8 @@
 				$form.addEventListener('submit', function(event) {
 
 					event.stopPropagation();
-					event.preventDefault();
-
+			//		event.preventDefault();
+					
 					// Hide message.
 						$message._hide();
 
