@@ -38,11 +38,11 @@
 						images: {
 							'images/bg01.jpg': 'center',
 							'images/bg02.jpg': 'center',
-							'images/bg03.jpg': 'center'
+							'images/bg03.jpg': 'top'
 						},
 
 					// Delay.
-						delay: 6000
+						delay: 9000
 
 				};
 
@@ -159,7 +159,7 @@
 								$submit.disabled = false;
 
 							// Show message.
-								$message._show('success', 'Thank you!');
+								$message._show('success', 'Got it!');
 								//$message._show('failure', 'Something went wrong. Please try again.');
 
 						}, 750);
