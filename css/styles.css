@@ -11632,6 +11632,10 @@ html {
   fill: #1e30f3;
 }
 
+.icon-feature {
+  font-size: 4rem;
+}
+
 @media (min-width: 576px) {
   .profile {
     height: 60vw;
