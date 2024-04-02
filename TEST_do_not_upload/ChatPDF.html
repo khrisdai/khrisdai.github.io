@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Query Tool</title>
+    <style>
+        /* Basic CSS for styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        #output {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+    </style>
+    <script src="chatpdf.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>PDF Query Tool</h1>
+        <form id="uploadForm">
+            <input type="file" id="pdfFile" accept=".pdf" required>
+            <button type="submit">Upload PDF</button>
+        </form>
+        <div id="output"></div>
+    </div>
+
+    <script>
+        // JavaScript code for handling file upload and querying
+        const uploadForm = document.getElementById('uploadForm');
+        const pdfFileInput = document.getElementById('pdfFile');
+        const outputDiv = document.getElementById('output');
+
+        uploadForm.addEventListener('submit', async (event) => {
+            event.preventDefault();
+            
+            const formData = new FormData();
+            formData.append('pdfFile', pdfFileInput.files[0]);
+
+            try {
+                const response = await fetch('/upload', {
+                    method: 'POST',
+                    body: formData
+                });
+
+                if (!response.ok) {
+                    throw new Error('Upload failed');
+                }
+
+                const data = await response.json();
+
+                // Display extracted text and query results
+                outputDiv.innerHTML = `
+                    <h2>Extracted Text</h2>
+                    <pre>${data.text}</pre>
+                    <h2>Query Results</h2>
+                    <pre>${JSON.stringify(data.queryResult, null, 2)}</pre>
+                `;
+            } catch (error) {
+                console.error('Error:', error);
+                outputDiv.innerHTML = '<p>Error uploading file. Please try again.</p>';
+            }
+        });
+    </script>
+</body>
+</html>
