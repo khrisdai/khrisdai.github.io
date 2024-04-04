@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Khris Dai</title>
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-CCE37Z32EH"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-CCE37Z32EH');
+        </script>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="../assets/favicon/favicon.ico" />
+        <link rel="icon" href="../assets/favicon/favicon-32x32.png" sizes="32x32">
+        <link rel="icon" href="../assets/favicon/android-chrome-192x192.png" sizes="192x192">
+        <link rel="apple-touch-icon" href="../assets/favicon/apple-touch-icon.png">
+        <!-- Custom Google font-->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet" />
+        <!-- Bootstrap icons-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="../css/styles.css" rel="stylesheet" />
+        <!-- Load d3.js -->
+        <script src="https://d3js.org/d3.v4.js"></script>
+        <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+        <script src="https://d3js.org/d3-geo-projection.v2.min.js"></script>
+    </head>
+    <body class="d-flex flex-column h-100 bg-light">
+        <main class="flex-shrink-0">
+            <!-- Navigation-->
+            <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
+                <div class="container px-5">
+                    <a class="navbar-brand" href="../index.html"><span class="fw-bolder text-gradient">KD's Sandbox</span></a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
+                            <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Projects</a>
+                                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item" href="mbti.html">Project MBTI</a></li>
+                                    <li><a class="dropdown-item" href="sandwich.html">Project S@ndwich</a></li>
+                                    <!--<li><hr class="dropdown-divider" /></li>-->
+                                </ul>
+                            </li>
+                            <li class="nav-item"><a class="nav-link" href="../resources.html">Resources</a></li>
+                            <li class="nav-item"><a class="nav-link" href="../contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <!-- Page Content-->
+            <div class="container px-5 my-5">
+                <div class="text-center mb-5">
+                    <h1 class="display-5 fw-bolder mb-0"><span class="text-gradient d-inline">Project S@ndwich</span></h1>
+                </div>
+                <div class="row gx-5 justify-content-center">
+                    <div class="col-lg-11 col-xl-9 col-xxl-8">
+                        <!-- Project Description-->
+                        <section>
+                            <div class="card shadow border-0 rounded-4 mb-5">
+                                <div class="card-body p-5">   
+                                    <div class="row ps-2">
+                                        <div class="form-check col">
+                                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                            <label class="form-check-label" for="flexRadioDefault1">English</label>
+                                        </div>
+                                        <div class="form-check col">
+                                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                                            <label class="form-check-label" for="flexRadioDefault2">中文</label>
+                                        </div>
+                                    </div>
+                                    <hr style="border-top: dotted 1px;" />
+
+                                    <div id="englishText" class="visually-hidden">
+                                        <p>We recently conducted a survey targeting first-generation American immigrants, aiming to gain insight into their parents' healthcare needs and identify any gaps.</p>
+                                        <div class="pb-3"></div>
+                                        <h5 class="fw-bolder mb-0"><span class="text-primary d-inline">Survey Population</span></h5>
+                                        <div class="pb-3"></div>
+                                        <div class="row align-items-center gx-5">
+                                            <div class="col-lg-6">
+                                                <div>
+                                                    <p>Over 75% of the people surveyed say their parents stay in the U.S. for over 3 months. Most are visiting on a B2 visitor visa.</p>
+                                                    <p>The age of their parents range from 55-80, with an average age of 65.</p>
+                                                    <p>85% of them have one or more chronic conditions such as hypertension, diabetes.</p>
+                                                    <p>2/3 of them take prescription drugs.</p>
+                                                </div>
+                                            </div>
+                                            <div class="col text-center text-lg-center mb-4 mb-lg-0">
+                                                <div class="bg-light p-4 rounded-4">
+                                                    <div class="small fw-bolder mb-2">Length of Stay</div>
+                                                    <div><img src="../assets/survey/survey_1.png" style="width: 100%;"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="pb-3"></div>
+                                        <h5 class="fw-bolder mb-0"><span class="text-primary d-inline">Survey Results</span></h5>
+                                        <div class="pb-3"></div>
+                                        <p>60% purchased travel insurance or short-term health insurance.</p>
+                                        <p>The rest 40% say they did not purchase insurance because
+                                            <ul>
+                                                <li>didn't find existing products valuable (e.g., too expensive and too restrictive)</li>
+                                                <li>didn't think it would be needed</li>
+                                                <li>not sure what to buy</li>
+                                            </ul>
+                                        </p>
+                                    </div>
+
+                                    <div id="chineseText">
+                                        <p>最近，我们进行了一项针对第一代美国移民的问卷调查，旨在深入了解他们父母的医疗需求以及目前存在的不足之处。</p>
+                                        <div class="pb-3"></div>
+                                        <h5 class="fw-bolder mb-0"><span class="text-primary d-inline">调查对象</span></h5>
+                                        <div class="pb-3"></div>
+                                        <div class="row align-items-center gx-5">
+                                            <div class="col-lg-6">
+                                                <div>
+                                                    <p>大部分受访者的父母持B2探亲签证来访美国，超过75%在美国逗留长达3个月以上。</p>
+                                                    <p>父母的年龄在55至80岁之间，平均年龄为65岁。</p>
+                                                    <p>85%患有一种或多种慢性病，比如高血压、糖尿病等。</p>
+                                                    <p>有三分之二的人需要服用处方药。</p>
+                                                </div>
+                                            </div>
+                                            <div class="col text-center text-lg-center mb-4 mb-lg-0">
+                                                <div class="bg-light p-4 rounded-4">
+                                                    <div class="small fw-bolder mb-2">逗留时间</div>
+                                                    <div><img src="../assets/survey/survey_1.png" style="width: 100%;"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="pb-3"></div> 
+                                        <h5 class="fw-bolder mb-0"><span class="text-primary d-inline">调查结果</span></h5>
+                                        <div class="pb-3"></div>
+                                        <p>大家都知道美国医疗费用为世界之最。为了避免经济上负担，60%的人选择购买旅行保险。
+                                            其余40%选择裸奔的朋友们表示他们没有购买保险，原因主要有：
+                                            <ul>
+                                                <li>现有的产品价值不高（例如，价格太贵、限制太多）</li>
+                                                <li>觉得不会用到</li>
+                                                <li>不确定应该购买什么</li>
+                                            </ul>
+                                         </p>
+                                         <!--<p>作为背负着独身子女重担的学霸，我决定翻遍全网探个究竟：到底什么是最佳选择？</p>
+                                         <p class="text-primary d-inline">问题一 What’s my risk exposure?</p>
+                                         <div class="pb-3"></div>
+                                         <hr style="border-top: dotted 1px;" />
+                                         <iframe title="西北大学纪念医院治疗费用" aria-label="Split Bars" id="datawrapper-chart-sqV0u" src="https://datawrapper.dwcdn.net/sqV0u/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="282" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();
+                                         </script>  
+                                         <hr style="border-top: dotted 1px;" />
+                                         <p class="text-primary d-inline">问题二 Existing solution and price point?</p>
+                                         <div class="pb-3"></div>
+                                         <p>test</p>
+                                         
+                                        <table class="table table-hover">
+                                            <thead>
+                                            <tr>
+                                                <th scope="col">年龄段</th>
+                                                <th scope="col">旅游签证</th>
+                                                <th scope="col">绿卡5年以下</th>
+                                                <th scope="col">绿卡5年以上</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            <tr>
+                                                <th scope="row">65岁以下</th>
+                                                <td>旅行保险<br />短期保险</td>
+                                                <td>旅行保险<br />奥巴马医保<br />Bridge Plan</td>
+                                                <td>旅行保险??<br />短期保险??</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">65岁以上</th>
+                                                <td>旅行保险<br />短期保险</td>
+                                                <td>奥巴马医保</td>
+                                                <td>Medicare（红蓝卡）或<br />Medicaid（白卡）</td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                        <p>旅行保险描述描述描述描述描述描述描述描述描述描述描述描述</p>
+                                        <hr style="border-top: dotted 1px;" />
+                                        <div class="row align-items-center gx-5">
+                                            <div class="col-lg-6">
+                                                <iframe title="自负额$500以下保费急剧上升" aria-label="Interactive line chart" id="datawrapper-chart-BsY3k" src="https://datawrapper.dwcdn.net/BsY3k/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="427" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();
+                                                </script>
+                                            </div>
+                                            <div class="col-lg-6">
+                                                    <iframe title="自负额$500以下保费急剧上升" aria-label="Interactive line chart" id="datawrapper-chart-BsY3k" src="https://datawrapper.dwcdn.net/BsY3k/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="427" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();
+                                                    </script>
+                                            </div>
+                                        </div>
+                                        <hr style="border-top: dotted 1px;" />
+                                        <p>描述描述描述描述描述描述描述 if you are interested in knowing more about ACA, click here</p>
+                                        <p class="text-primary d-inline">问题三 Risk tolerance</p>
+                                        <div class="pb-3"></div>
+                                        <p>test</p>-->
+                                </div>
+                            </div>
+                        </section>
+                        
+                        <!--<section>
+                            <div class="card shadow border-0 rounded-4 mb-5">
+                                <div class="card-body p-5">
+                                    <div class="mb-0">
+                                        <div class="d-flex align-items-center mb-4">
+                                            <div class="feature bg-primary bg-gradient-primary-to-secondary text-white rounded-3 me-3"><i class="bi bi-patch-question-fill"></i></div>
+                                            <h3 class="fw-bolder mb-0"><span class="text-gradient d-inline">CTA</span></h3>
+                                        </div>
+                                        <div class="pb-3"></div>
+                                        <div>
+                                            <p>social handle.</p>
+                                            <a class="text-gradient fs-2 gap-4" href="#"><i class="bi bi-envelope"></i></a><br />
+                                            <a class="fs-2 gap-4" href="#" target="_blank" style="color: #45c100;"><i class="bi bi-wechat"></i></a>
+                                            <div class="d-flex fs-2 gap-4">
+                                                <a class="fs-2 gap-4" href="#" style="color: #6B7474;"><i class="bi bi-envelope"></i></a>
+                                                <a class="fs-2 gap-4" href="#" target="_blank" style="color: #45c100;"><i class="bi bi-wechat"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>-->
+                    </div>
+                </div>
+            </div>
+        </main>
+        <!-- Footer-->
+        <footer class="bg-white py-4 mt-auto">
+            <div class="container px-5">
+                <div class="row align-items-center justify-content-between flex-column flex-sm-row">
+                    <div class="col-auto"><div class="small m-0">Copyright &copy; Khris Dai 2024</div></div>
+                    <!--<div class="col-auto">
+                        <a class="small" href="#!">Privacy</a>
+                        <span class="mx-1">&middot;</span>
+                        <a class="small" href="#!">Terms</a>
+                        <span class="mx-1">&middot;</span>
+                        <a class="small" href="#!">Contact</a>
+                    </div>-->
+                </div>
+            </div>
+        </footer>
+        
+        <!--show content based on language selected-->
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                const englishRadio = document.getElementById("flexRadioDefault1");
+                const chineseRadio = document.getElementById("flexRadioDefault2");
+                const englishText = document.getElementById("englishText");
+                const chineseText = document.getElementById("chineseText");
+    
+                // Show English text when English radio button is selected
+                englishRadio.addEventListener("change", function() {
+                    if (englishRadio.checked) {
+                        englishText.classList.remove("visually-hidden");
+                        chineseText.classList.add("visually-hidden");
+                    }
+                });
+    
+                // Show Chinese text when Chinese radio button is selected
+                chineseRadio.addEventListener("change", function() {
+                    if (chineseRadio.checked) {
+                        chineseText.classList.remove("visually-hidden");
+                        englishText.classList.add("visually-hidden");
+                    }
+                });
+            });
+        </script>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="../js/scripts.js"></script>
+    </body>
+</html>

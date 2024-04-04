@@ -42,12 +42,11 @@
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Projects</a>
                                 <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                    <li><a class="dropdown-item" href="project-m.html">Project MBTI</a></li>
-                                    <li><a class="dropdown-item" href="project-s.html">Project S@ndwich</a></li>
+                                    <li><a class="dropdown-item" href="projects/mbti.html">Project MBTI</a></li>
+                                    <li><a class="dropdown-item" href="projects/sandwich.html">Project S@ndwich</a></li>
                                     <!--<li><hr class="dropdown-divider" /></li>-->
                                 </ul>
                             </li>
-                            <li class="nav-item"><a class="nav-link" href="toolkit.html">Toolkit</a></li>
                             <li class="nav-item"><a class="nav-link" href="resources.html">Resources</a></li>
                             <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                         </ul>
@@ -60,6 +59,13 @@
                     <div class="col-lg-6 col-md-8 mx-auto">
                         <h1 class="display-5 fw-bolder mb-0"><span class="text-gradient d-inline">Resources</span></h1>
                         <p class="lead text-muted pt-sm-3">Your go-to destination for insightful articles and practical tools. Enjoy exploring!</p>
+                        <!-- Filter buttons -->
+                        <div id="myBtnContainer">
+                            <button class="btn btn-outline-dark btn-sm active" onclick="filterSelection('all')"> Show All</button>
+                            <button class="btn btn-outline-dark btn-sm" onclick="filterSelection('catA')"> Data</button>
+                            <button class="btn btn-outline-dark btn-sm" onclick="filterSelection('catB')"> Insights</button>
+                            <button class="btn btn-outline-dark btn-sm" onclick="filterSelection('catC')"> Decisions</button>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -67,48 +73,95 @@
                 <div class="container">
             
                 <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-                    <div class="col">
+                    <!--card 1-->
+                    <div class="col filterDiv catB">
                     <div class="card shadow-sm">
                         <img src="assets/resources/aca_promo.png" alt="shrinkflation">
                         <div class="card-body">
                         <p class="card-text fw-normal">Combating Choice Overload<br />Follow these rules</p>
                         <div class="d-flex justify-content-between align-items-center">
                             <div class="btn-group">
-                            <a class="btn btn-sm btn-outline-dark" href="resources/choose.html" role="button">Read</a>
+                            <a class="btn btn-sm btn-outline-dark" href="resources/choose.html" role="button">View</a>
                             </div>
-                            <small class="text-body-secondary">2 mins</small>
+                            <small class="text-body-secondary">Insights</small>
                         </div>
                         </div>
                     </div>
                     </div>
-                    
-                   <div class="col">
+                   <!--card 2-->
+                   <div class="col filterDiv catC">
                     <div class="card shadow-sm">
                         <img src="assets/resources/aca_map.png" alt="coming soon">
                         <div class="card-body">
                         <p class="card-text fw-normal">Lost in ACA Marketplace Maze?<br />Use this visual guide</p>
                         <div class="d-flex justify-content-between align-items-center">
                             <div class="btn-group">
-                            <a class="btn btn-sm btn-outline-dark" href="resources/ACA_map.html" role="button">Read</a>
+                            <a class="btn btn-sm btn-outline-dark" href="resources/ACA_map.html" role="button">View</a>
                             </div>
-                            <small class="text-body-secondary"></small>
+                            <small class="text-body-secondary">Decisions</small>
                         </div>
                         </div>
                     </div>
                     </div>
-                    <div class="col">
+                    <!--card 3-->
+                    <div class="col filterDiv catB">
                     <div class="card shadow-sm">
                         <img src="assets/resources/shrinkflation.png" alt="shrinkflation">
                         <div class="card-body">
                         <p class="card-text fw-normal">Shrinkflation in Health Insurance <br />Smaller networks, lower premiums</p>
                         <div class="d-flex justify-content-between align-items-center">
                             <div class="btn-group">
-                            <a class="btn btn-sm btn-outline-dark" href="https://open.substack.com/pub/khrisdai/p/shrinkflation-in-health-insurance?r=2iykvd&utm_campaign=post&utm_medium=web" role="button" target="_blank">Read</a>
+                            <a class="btn btn-sm btn-outline-dark" href="https://open.substack.com/pub/khrisdai/p/shrinkflation-in-health-insurance?r=2iykvd&utm_campaign=post&utm_medium=web" role="button" target="_blank">View</a>
                             </div>
-                            <small class="text-body-secondary">3 mins</small>
+                            <small class="text-body-secondary">Insights</small>
                         </div>
                         </div>
                     </div>
+                    </div>
+                    <!--card 4-->
+                    <div class="col filterDiv catA">
+                        <div class="card shadow-sm">
+                            <img src="assets/resources/QHvKz.png" alt="premium_by_age" style="height: 281px;">
+                            <div class="card-body">
+                            <p class="card-text fw-normal">Premium Increases with Age with Significant Jump after Age 45</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                <a class="btn btn-sm btn-outline-dark" href="resources/data.html#chart1" role="button">View</a>
+                                </div>
+                                <small class="text-body-secondary">Data</small>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--card 5-->
+                    <div class="col filterDiv catA">
+                        <div class="card shadow-sm">
+                            <img src="assets/resources/Nxd9E.png" alt="premium_by_state" style="height: 281px;">
+                            <div class="card-body">
+                            <p class="card-text fw-normal">Wide Swing in Premium across States for Individuals on ACA Marketplace</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                <a class="btn btn-sm btn-outline-dark" href="resources/data.html#chart2" role="button">View</a>
+                                </div>
+                                <small class="text-body-secondary">Data</small>
+                            </div>
+                            </div>
+                        </div>
+                        </div>
+                    <!--card 6-->
+                    <div class="col filterDiv catA">
+                        <div class="card shadow-sm">
+                            <img src="assets/resources/4ebNJ.png" alt="price_by_insurance" style="height: 281px;">
+                            <div class="card-body">
+                            <p class="card-text fw-normal">A Look into Hospital Price Transparency: Same Hospital, Same Treatment, Different Prices</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                <a class="btn btn-sm btn-outline-dark" href="resources/data.html#chart3" role="button">View</a>
+                                </div>
+                                <small class="text-body-secondary">Data</small>
+                            </div>
+                            </div>
+                        </div>
                     </div>
                     <div class="pb-3"></div>
                 </div>

@@ -11736,3 +11736,13 @@ html {
     left: -2vw;
   }
 }
+
+/* filter button */
+.filterDiv {
+  display: none; /* Hidden by default */
+}
+
+/* The "show" class is added to the filtered elements */
+.show {
+  display: block;
+}
