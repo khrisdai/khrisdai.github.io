@@ -59,7 +59,7 @@
                     <h1 class="display-5 fw-bolder mb-0"><span class="text-gradient d-inline">Project S@ndwich</span></h1>
                 </div>
                 <div class="row gx-5 justify-content-center">
-                    <div class="col-lg-11 col-xl-9 col-xxl-8">
+                    <div class="col-lg-11 col-xl-9 col-xxl-8 bg-white shadow p-4 rounded-4">
                         <!--language controls-->
                         <!-- <div class="row ps-2">
                             <div class="form-check col">
@@ -72,7 +72,6 @@
                                 <label class="form-check-label" for="flexRadioDefault1">English</label>
                             </div>
                         </div> -->
-                        <hr style="border-top: dotted 1px;" />
                         <!--Chinese Content-->
                         <div id="chineseText">
                             <p>最近，我们进行了一项针对第一代美国移民的问卷调查，旨在深入了解他们父母的医疗需求以及目前存在的不足之处。</p>
@@ -80,7 +79,7 @@
                             <h5 class="fw-bolder mb-0"><span class="text-primary d-inline">调查对象</span></h5>
                             <div class="pb-3"></div>
                             <div class="row align-items-center gx-5">
-                                <div class="col-lg-6">
+                                <div class="col-lg-8">
                                     <div>
                                         <p>大部分受访者的父母持B2探亲签证来访美国，超过75%在美国逗留长达3个月以上。</p>
                                         <p>父母的年龄在55至80岁之间，平均年龄为65岁。</p>
@@ -89,7 +88,7 @@
                                     </div>
                                 </div>
                                 <div class="col text-center text-lg-center mb-4 mb-lg-0">
-                                    <div class="bg-white shadow p-2 rounded-4">
+                                    <div class="bg-white p-2 rounded-4">
                                         <div class="small fw-bolder mb-2">逗留时间</div>
                                         <div><img src="../assets/survey/survey_1.png" style="width: 100%;"></div>
                                     </div>
@@ -108,7 +107,7 @@
                                 </ul>
                             </p>
                             <p>作为背负着独身子女重担的学霸 <span class="text-gradient"><i class="bi bi-emoji-sunglasses"></i></span>，我们决定翻遍全网探个究竟：到底什么是最佳选择？</p>
-                            <p class="fw-bolder text-gradient d-inline">问题一：我需要承担的风险是什么？</p>
+                            <p class="fw-bolder text-gradient d-inline" id="q1">问题一：我需要承担的风险是什么？</p>
                             <div class="pb-3"></div>
                             <p>关于父母的医疗需求，我们询问了周围的朋友，大家认为的需求包括：
                                 <ol>
@@ -117,47 +116,44 @@
                                     <li>万一有严重疾病或意外需要紧急治疗，治疗不至于倾家荡产</li>
                                 </ol>
                                 针对需求1和2，可以通过远程医疗（Tele-health）和急诊中心（Urgent Care）解决，费用在几百块左右。对于重大风险，60岁以上的人最容易发生心脏病、中风、骨折等紧急情况。以芝加哥的Northwestern Memorial Hospital为例，住院费用大部分情况下在2-3万美元，严重情况可能高达几十万或甚至上百万（重症监护室）。美国的医疗费用虽然高昂，但幸运的是，如果真的支付不起，医院通常会提供折扣或无息贷款。</p>
-                            <div class="row align-items-center gx-5 bg-white shadow p-2 rounded-4">
-                                <iframe title="西北大学纪念医院治疗费用" aria-label="Split Bars" id="datawrapper-chart-sqV0u" src="https://datawrapper.dwcdn.net/sqV0u/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="282" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();
-                                </script>  
-                            </div>
+                            <hr style="border-top: dotted 1px;" />
+                            <iframe title="西北大学纪念医院治疗费用" aria-label="Split Bars" id="datawrapper-chart-sqV0u" src="https://datawrapper.dwcdn.net/sqV0u/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="282" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();
+                            </script>
+                            <hr style="border-top: dotted 1px;" />
+                            <p class="fw-bolder text-gradient d-inline" id="q2">问题二：现有解决方案有哪些？</p>
                             <div class="pb-3"></div>
-                            <p class="fw-bolder text-gradient d-inline">问题二：现有解决方案有哪些？</p>
-                            <div class="pb-3"></div>
-                            <p>那么对于父母年龄段的人，有哪些方式来控制风险呢？以下是不同年龄段和签证类型可选择的保险。</p>
-                            <div class="row align-items-center gx-5 bg-white shadow p-2 rounded-4">
-                                <table class="table table-hover bg-white">
-                                    <thead>
-                                    <tr>
-                                        <th scope="col">年龄段</th>
-                                        <th scope="col">旅游签证</th>
-                                        <th scope="col">绿卡5年以下</th>
-                                        <th scope="col">绿卡5年以上</th>
-                                    </tr>
-                                    </thead>
-                                    <tbody>
-                                    <tr>
-                                        <th scope="row">65岁以下</th>
-                                        <td>旅行保险<br />短期保险</td>
-                                        <td>旅行保险<br />奥巴马医保<br />Bridge Plan</td>
-                                        <td>旅行保险<br />短期保险</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">65岁以上</th>
-                                        <td>旅行保险<br />短期保险</td>
-                                        <td>奥巴马医保</td>
-                                        <td>Medicare（红蓝卡）或<br />Medicaid（白卡）</td>
-                                    </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                            <div class="pb-3"></div>
+                            <p>那么对于父母年龄段的人，有哪些方式来控制风险呢？以下是不同年龄段和签证类型可选择的保险。</p>       
+                            <table class="table table-hover table-bordered">
+                                <thead>
+                                <tr>
+                                    <th scope="col">年龄段</th>
+                                    <th scope="col">旅游签证</th>
+                                    <th scope="col">绿卡5年以下</th>
+                                    <th scope="col">绿卡5年以上</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <th scope="row">65岁以下</th>
+                                    <td>旅行保险<br />短期保险</td>
+                                    <td>旅行保险<br />奥巴马医保<br />Bridge Plan</td>
+                                    <td>旅行保险<br />短期保险</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">65岁以上</th>
+                                    <td>旅行保险<br />短期保险</td>
+                                    <td>奥巴马医保</td>
+                                    <td>Medicare（红蓝卡）或<br />Medicaid（白卡）</td>
+                                </tr>
+                                </tbody>
+                            </table>  
                             <p>大多数在美国工作的朋友们并不了解医疗保险的真实成本，因为雇主通常会补贴大部分（70%-80%）的费用。如果想知道真实成本，请查看你的W-2表格（Box 12 DD）。Spoiler Alert: 大多数雇主提供的医疗保险的全额费用大约在每人每月<a href="https://www.kff.org/wp-content/uploads/2023/10/Figure-6-7.png?w=698" target="_blank" class="link-secondary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">600美元至1000美元</a>之间。</p>
                             <p>对于60岁的个人，奥巴马医保每月<a href="https://visuary.org/resources/data#chart1" target="_blank" class="link-secondary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">超过 900 美元</a>。而旅行保险的费用范围在每月100美元至500美元不等，覆盖面相对较小，且有最高赔付额限制。</p>
                             <p class="text-primary">旅行保险</p>
                             <p>问卷调查显示，购买旅行保险的受访者中，一半选择国内保险（比如平安保险），另一半选择国外保险。国内保险通常需要先垫付医疗费用，回国后报销。这样的模式医院收取的应该是无保险的价格。国外保险中，有些使用美国保险公司的医疗网络（比如United Healthcare PPO 网络），患者无需垫付费用，由保险公司直接与医院结算。</p>
                             <p>下图以其中一款旅行保险为例。如果你选择购买旅行保险，建议避免自负额$500以下的，因为非常不合算！最高保额的选择取决于你的风险承受能力。</p>
-                            <div class="row align-items-center gx-5 bg-white shadow p-2 rounded-4">
+                            <hr style="border-top: dotted 1px;" />
+                            <div class="row align-items-center gx-5">
                                 <div class="col-lg-6">
                                     <iframe title="自负额$500以下保费急剧上升" aria-label="Interactive line chart" id="datawrapper-chart-BsY3k" src="https://datawrapper.dwcdn.net/BsY3k/3/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="446" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();
                                     </script>
@@ -167,7 +163,7 @@
                                     </script>
                                 </div>
                             </div>
-                            <div class="pb-3"></div>
+                            <hr style="border-top: dotted 1px;" />
                             <p class="text-primary">奥巴马医保</p>
                             <p>如果你想了解如何选择奥巴马医保，请参考<a href="https://visuary.org/resources" target="_blank" class="link-primary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">这些信息</a>。</p>
                             <div class="pb-3"></div>
@@ -176,17 +172,23 @@
                             <p>选择适合的医疗保险（或不买保险）需要综合考虑：</p>
                             <ul>
                                 <li>父母的健康状况</li>
-                                <li>在美期间可能面临的医疗费用（见问题一）</li>
+                                <li>在美期间可能面临的医疗费用（见<a href="#q1" class="link-dark">问题一</a>）</li>
                                 <li>财务状况和预算</li>
-                                <li>美国医疗体系和保险产品（见问题二）</li>
+                                <li>美国医疗体系和保险产品（见<a href="#q2" class="link-dark">问题二</a>）</li>
                             </ul>
                             <p>Life is all about tradeoffs. </p>
-                            <p>May you never have to use insurance. <i class="bi bi-heart text-gradient"></i></p>
+                            <p>May you never have to use insurance. <i class="bi bi-heart text-gradient"></i></p>                         
                             <hr style="border-top: dotted 1px;" />
-                            <div class="d-flex justify-content-center fs-2 gap-4">
-                                <a class="text-gradient" href="mailto:khris.dai@icloud.com?subject=Outreach%20from%20Sandbox"><i class="bi bi-envelope"></i></a>
-                                <a class="text-gradient" href="https://www.linkedin.com/in/khrisdai/" target="_blank"><i class="bi bi-linkedin"></i></a>
-                                <a class="text-gradient" href="https://khrisdai.substack.com/" target="_blank"><i class="bi bi-substack"></i></a>
+                            <div class="d-flex justify-content-center fs-5 gap-4">
+                                <!--like button-->
+                                <div class="CountLike" id="Like_Count_C1">
+                                    <button class="btn btn-outline-dark">
+                                        <i class="bi bi-heart-fill"></i> Like <span class="counterStat">...</span>
+                                    </button>
+                                </div>
+                                <a class="btn btn-outline-dark" href="mailto:khris.dai@icloud.com?subject=Hello!"><i class="bi bi-envelope"></i>&nbsp;&nbsp;Email&nbsp;</a>
+                                <button id="copy-link-button" class="btn btn-outline-dark"><i class="bi bi-share-fill"></i>&nbsp;&nbsp;Share&nbsp;</button>
+                                <div id="copy-message" style="font-size: 0.8rem;">Link Copied</div>
                             </div>
                         </div>
                         <!--English Content-->
@@ -272,6 +274,29 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
         <script src="../js/scripts.js"></script>
-     
+        <!--link to counter-->
+        <script type="module" src="https://visuary.org/js/counter.js"></script>
+        <!--copy link-->
+        <script>
+        const copyLinkButton = document.getElementById('copy-link-button');
+        const copyMessage = document.getElementById('copy-message');
+
+        copyLinkButton.addEventListener('click', function() {
+        const currentUrl = window.location.href;
+        navigator.clipboard.writeText(currentUrl)
+            .then(() => {
+            copyMessage.style.display = 'inline'; // Show the copied message
+            setTimeout(() => {
+                copyMessage.style.display = 'none'; // Hide the message after a while
+            }, 2000); // You can adjust the display time here (in milliseconds)
+            })
+            .catch(err => {
+            console.error('Failed to copy link: ', err);
+            });
+        });
+
+        // Initially hide the message
+        copyMessage.style.display = 'none';
+        </script>
     </body>
 </html>
