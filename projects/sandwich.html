@@ -180,12 +180,8 @@
                             <p>May you never have to use insurance. <i class="bi bi-heart text-gradient"></i></p>                         
                             <hr style="border-top: dotted 1px;" />
                             <div class="d-flex justify-content-center fs-5 gap-4">
-                                <!--like button-->
-                                <div class="CountLike" id="Like_Count_C1">
-                                    <button class="btn btn-outline-dark">
-                                        <i class="bi bi-heart-fill"></i> Like <span class="counterStat">...</span>
-                                    </button>
-                                </div>
+                                <button class="btn btn-outline-dark" id="like-button"><i class="bi bi-heart-fill"></i>&nbsp;&nbsp;Like <span id="like-count">50</span></button>
+                                
                                 <a class="btn btn-outline-dark" href="mailto:khris.dai@icloud.com?subject=Hello!"><i class="bi bi-envelope"></i>&nbsp;&nbsp;Email&nbsp;</a>
                                 <button id="copy-link-button" class="btn btn-outline-dark"><i class="bi bi-share-fill"></i>&nbsp;&nbsp;Share&nbsp;</button>
                                 <div id="copy-message" style="font-size: 0.8rem;">Link Copied</div>
@@ -274,8 +270,18 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
         <script src="../js/scripts.js"></script>
-        <!--link to counter-->
-        <script type="module" src="https://visuary.org/js/counter.js"></script>
+        <!--count likes-->
+        <script>
+            const likeButton = document.getElementById('like-button');
+            const likeCountSpan = document.getElementById('like-count');
+
+            let likeCount = 50; // Initialize like count
+
+            likeButton.addEventListener('click', function() {
+            likeCount++; // Increment like count on click
+            likeCountSpan.textContent = `${likeCount}`; // Update displayed count
+            });
+        </script>
         <!--copy link-->
         <script>
         const copyLinkButton = document.getElementById('copy-link-button');
